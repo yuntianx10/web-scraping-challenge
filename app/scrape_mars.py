@@ -14,7 +14,7 @@ def scrape_data():
     news_title, news_paragraph = mars_news(browser)
 
     # Run scraping functions and store results in a dictionary
-    scraping_results = {
+    data = {
         "news_title": news_title,
         "news_paragraph": news_paragraph,
         "featured_image": featured_image(browser),
@@ -25,7 +25,7 @@ def scrape_data():
     }
 
     browser.quit()
-    return scraping_results
+    return data
 
 
 def mars_news(browser):
